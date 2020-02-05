@@ -61,6 +61,9 @@ cc_defaults {
 
                 // Not supported yet.
                 "-Wno-thread-safety",
+
+		// resolve an issue with make dist
+		"-Wno-sign-compare",
             ],
 
             host_ldlibs: [
