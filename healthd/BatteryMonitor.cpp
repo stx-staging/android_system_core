@@ -469,7 +469,7 @@ void BatteryMonitor::updateValues(void) {
             case ANDROID_POWER_SUPPLY_TYPE_WIRELESS:
                 path.clear();
                 path.appendFormat("%s/%s/online", POWER_SUPPLY_SYSFS_PATH, name);
-                if (access(path.string(), R_OK) == 0)
+                if (access(path.c_str(), R_OK) == 0)
                     mChargerNames.add(String8(name));
                 break;
             default:
